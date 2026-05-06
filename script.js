@@ -29,7 +29,9 @@ let gameOver = false;
 let winningCells = null;
 let lineProgress = 0;
 
-let scoreX = 0, scoreO = 0, scoreDraw = 0;
+let scoreX = 0;
+let scoreO = 0;
+let scoreDraw = 0;
 
 let player1 = "Player 1";
 let player2 = "Player 2";
@@ -38,10 +40,24 @@ let selectedModeTemp = null;
 // MENU → POPUP
 function startGame(m){
     selectedModeTemp = m;
+
+    // 🔥 RESET SCORES
+    scoreX = 0;
+    scoreO = 0;
+    scoreDraw = 0;
+    updateScoreboard();
+
+    // 🔥 RESET BOARD STATE
+    board = ["", "", "", "", "", "", "", "", ""];
+    currentPlayer = "X";
+    gameActive = true;
+
+    // 🔥 SHOW POPUP
     popup.style.display = "flex";
 
+    // 🔥 RESET INPUTS
     document.getElementById("player1Input").value = "";
-    document.getElementById("player2Input").value = (m==="two") ? "" : "AI";
+    document.getElementById("player2Input").value = (m === "two") ? "" : "AI";
 }
 
 // CONFIRM
@@ -302,3 +318,8 @@ function animate(){
     requestAnimationFrame(animate);
 }
 animate();
+function updateScoreboard() {
+    document.getElementById("scoreX").innerText = scoreX;
+    document.getElementById("scoreO").innerText = scoreO;
+    document.getElementById("scoreDraw").innerText = scoreDraw;
+}
