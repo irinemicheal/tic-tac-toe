@@ -20,7 +20,6 @@ A modern, interactive **Tic Tac Toe game** built with **HTML, CSS, and JavaScrip
 * 🧠 **AI Difficulty Levels**
 
   * Easy (Random moves)
-  * Medium (Mix of random + smart)
   * Hard (Minimax Algorithm)
 
 * 👥 **Player Customization**
@@ -113,8 +112,13 @@ The AI uses the **Minimax algorithm**, which:
 ---
 
 ## 📸 Screenshots
+1.index page
 
-*Add screenshots here if needed*
+<img width="1920" height="869" alt="Screenshot (150)" src="https://github.com/user-attachments/assets/0cbee8a8-8697-466c-8354-7f68e7492761" />
+2. AI Mode
+<img width="1902" height="918" alt="Screenshot (152)" src="https://github.com/user-attachments/assets/3fda434c-e3b6-4ae5-903a-1c61b6ae9a46" />
+3.2 Player Mode
+<img width="1902" height="918" alt="Screenshot (152)" src="https://github.com/user-attachments/assets/3e8d5036-355a-43a3-ac05-52ca62104c6b" />
 
 ---
 
