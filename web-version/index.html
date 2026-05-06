@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <h1>🎮 Tic Tac Toe</h1>
+
+    <!-- MENU -->
+    <div id="menuScreen" class="card">
+        <h2>Select Mode</h2>
+        <button onclick="startGame('easy')">Easy</button>
+        <button onclick="startGame('hard')">Hard</button>
+        <button onclick="startGame('two')">2 Player</button>
+    </div>
+
+    <!-- POPUP -->
+    <div id="namePopup" class="popup" style="display:none;">
+        <div class="popup-box">
+            <h2>Enter Player Details</h2>
+            <input id="player1Input" placeholder="Player 1 Name" />
+            <input id="player2Input" placeholder="Player 2 / AI Name" />
+            <button onclick="confirmPlayers()">Start Game</button>
+        </div>
+    </div>
+
+    <!-- GAME -->
+    <div id="gameScreen" class="card" style="display:none;">
+
+        <div id="scoreboard">
+            <div id="labelX">❌ Player 1: <span id="scoreX">0</span></div>
+            <div id="labelO">⭕ Player 2: <span id="scoreO">0</span></div>
+            <div>🤝 Draw: <span id="scoreDraw">0</span></div>
+        </div>
+
+        <canvas id="board" width="300" height="300"></canvas>
+
+        <p id="status"></p>
+
+        <div class="actions">
+            <button onclick="resetGame()">Restart</button>
+            <button class="secondary" onclick="goToMenu()">Menu</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
